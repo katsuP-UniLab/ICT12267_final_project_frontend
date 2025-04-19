@@ -1,23 +1,33 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+
 import { linkCreation } from '@/modules/apis/linkCreation.ts'
+import { CodeGenerator } from '@/modules/qrCodeGenerator.ts'
 
 const props = defineProps<{
   state: () => void
   value: () => void
+  code: () => void
 }>()
 
 const link = ref<string>('')
 
-const submitFunction = (e) => {
+const submitFunction = async (e) => {
   e.preventDefault()
 
   if (link != '') {
-    let create = linkCreation(link.value)
+    let create = await linkCreation(link.value)
 
     if (create !== undefined && create !== null) {
       props.value(create)
-      props.state()
+
+      const code = await CodeGenerator(create)
+      console.log(code)
+
+      if (code !== undefined && code !== null) {
+        props.code(code)
+        props.state()
+      }
     }
   }
 }
