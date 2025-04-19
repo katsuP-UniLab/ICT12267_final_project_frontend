@@ -26,7 +26,7 @@ const codeSwitch = (code64: string) => {
   <main>
     <div class="w-full h-screen flex items-center justify-center">
       <CreateBox :state="toggle" :value="forceSlug" :code="codeSwitch" v-if="state == false" />
-      <ResultBox :state="toggle" :value="code" v-else />
+      <ResultBox :state="toggle" :link="value" :value="code" v-else />
     </div>
   </main>
 </template>
