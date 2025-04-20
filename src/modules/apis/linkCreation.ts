@@ -1,4 +1,5 @@
 export const linkCreation = async (link: string): Promise<string | undefined | null> => {
+  let rtnLink
   // console.log(link)
 
   const uri = `${import.meta.env.VITE_BACKEND_API}/api/links/create`
@@ -19,8 +20,8 @@ export const linkCreation = async (link: string): Promise<string | undefined | n
   ).json()
 
   if (fetchAPI != undefined) {
-    link = `${window.location.href}sh/${fetchAPI.payload.slug}`
+    rtnLink = `${window.location.href}sh/${fetchAPI.payload.slug}`
   }
 
-  return link
+  return rtnLink
 }

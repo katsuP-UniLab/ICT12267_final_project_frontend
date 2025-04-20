@@ -22,7 +22,6 @@ const submitFunction = async (e) => {
       props.value(create)
 
       const code = await CodeGenerator(create)
-      console.log(code)
 
       if (code !== undefined && code !== null) {
         props.code(code)

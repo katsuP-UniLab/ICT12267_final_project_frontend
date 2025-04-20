@@ -7,11 +7,9 @@ import ResultBox from '@/components/ResultBox.vue'
 const state = ref<boolean>(false)
 const value = ref<string>('')
 const code = ref<string>('')
-console.log(state.value)
 
 const toggle = () => {
   state.value = !state.value
-  // console.log(state.value)
 }
 
 const forceSlug = (link: string) => {
