@@ -38,7 +38,7 @@ const update = (e) => {
 
 <template>
   <div
-    class="min-w-[18rem] max-w-[60%] w-full bg-cat-mantle text-cat-text rounded-xl border-2 border-solid border-cat-subtext-1 p-4 text-center flex flex-col items-center gap-4"
+    class="min-w-[18rem] max-w-[60%] w-full bg-cat-mantle text-cat-text rounded-xl border-2 border-solid border-cat-subtext-1 px-4 py-6 text-center flex flex-col items-center gap-4"
   >
     <h1 class="font-bold text-xl underline">Link Shortener Services</h1>
     <form @submit="(e) => submitFunction(e)" class="w-full flex flex-col gap-4 items-center py-2">

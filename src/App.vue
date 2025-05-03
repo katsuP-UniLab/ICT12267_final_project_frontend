@@ -5,6 +5,8 @@ import Footer from './components/Footer.vue'
 </script>
 
 <template>
-  <div class="w-full min-h-screen bg-cat-base"><RouterView /></div>
+  <div class="w-full min-h-screen bg-cat-base">
+    <RouterView />
+  </div>
   <Footer />
 </template>
